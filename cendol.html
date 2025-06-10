@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cendol Jelly 21</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">Cendol Jelly 21</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Rasa Tradisional, Tampilan Modern</h1>
+      <p>Cendol kekinian dalam kemasan estetik — cocok untuk semua usia dan tren!</p>
+      <h3 class="price">Harga: Rp 12.000 / botol</h3>
+      <div class="product-images">
+        <img src="sampel-produk.jpeg" alt="Cendol Jelly 21" />
+        <img src="contoh-produk.jpg" alt="Cendol Jelly 21 di kulkas" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        Cendol Jelly 21 adalah inovasi minuman tradisional yang kami kemas secara modern dan kekinian.
+        Menggabungkan kelembutan susu, kesegaran cendol, dan sensasi jelly yang unik, produk ini dirancang
+        untuk memberikan pengalaman minum yang menyenangkan bagi berbagai kalangan, dari anak-anak hingga
+        orang dewasa. Dengan tampilan yang estetik dan rasa yang memikat, Cendol Jelly 21 hadir sebagai jawaban
+        atas tren minuman yang tidak hanya enak, tetapi juga menarik secara visual dan bernilai budaya.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact / Pemesanan -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Pesan Sekarang</h2>
+      <form id="orderForm" target="_blank">
+        <label for="jumlah">Jumlah:</label>
+        <input type="number" id="jumlah" name="jumlah" min="5" required />
+
+        <label for="varian">Varian Rasa:</label>
+        <select id="varian" name="varian" required>
+          <option value="Original">Original</option>
+        </select>
+
+        <button type="submit">Kirim ke WhatsApp</button>
+      </form>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/cendoljelly21?igsh=YmFkZmJlMDlsMjFx&utm_source=qr" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+        </a>
+        <a href="https://wa.me/6285659563708" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Cendol Jelly 21. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const jumlah = document.getElementById('jumlah').value;
+      const varian = document.getElementById('varian').value;
+      const message = `Halo, saya mau pesan Cendol Jelly 21.%0AJumlah: ${jumlah}%0AVarian: ${varian}`;
+      window.open(`https://wa.me/6285716755503?text=${message}`, '_blank');
+    });
+  </script>
+</body>
+</html>
